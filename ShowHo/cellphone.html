@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="keywords" content="深圳市秀狐网络传媒有限公司">
+		<meta name="description" content="深圳市秀狐网络传媒有限公司">
+		<meta id="viewport" name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+		<meta name="format-detection" content="telephone=no">
+	    <meta name="apple-mobile-web-app-capable" content="yes">
+	    <meta name="apple-mobile-web-app-status-bar-style" content="black">	
+		<link rel="shortcut icon" href="img/logo.ico" type="image/x-icon" media="screen">
+	</head>
+	<style type="text/css">
+		body{
+			padding: 0px;
+			margin: 0 auto;
+			text-align: center;
+		}
+		#cellphone-top{
+			background-size: 100% 100%;
+			background-repeat: no-repeat;
+			background-position: center;
+			background-image: url("img/background_01.png");
+		}
+		.top-img{
+			width: 55%;
+			
+		}
+		
+		#cellphone-center img{
+			width: 100%;<script src="../../js/lib/wap-config.js" defer="true"></script>
+		}
+		#cellphone-bottom{
+			background-size: 100% 100%;
+			background-repeat: no-repeat;
+			background-position: center;
+			background-image: url("img/background_02.png");
+			margin-top: -3px;
+			
+		}
+		#cellphone-bottom button{
+			background-color: #39b2d1;
+			color: #fff;
+			width: 80%;
+			border: 0px;
+			border-radius: 5px;
+			padding: 11px;
+    		margin: 44px 0px 0px 0px;
+		}
+	</style>
+	<body>
+		<div id="cellphone-top">
+			<img class="top-img" id="top-img" src="img/showho.png">
+		</div>
+		<div id="cellphone-center">
+			<img src="img/centen_02.png">
+		</div>
+		<div id="cellphone-bottom">
+			<button id="iosButton" onclick="test('ios')">IOS版下载</button>
+			<button id="androidButton" onclick="test('android')">Android版下载</button>
+		</div>
+		<script type="text/javascript"> 
+
+		</script>
+	</body>
+	<script type="text/javascript">
+		 window.onload=function(){
+		 	var windowHight=document.body.scrollHeight;
+		 	var center= document.getElementById("cellphone-center").scrollHeight;		
+		 	var single=(windowHight-center)/3;
+		 	document.getElementById("cellphone-top").style.height=single+"px";
+		 	document.getElementById("cellphone-bottom").style.height=single*2+2+"px";
+		 	var imgheight= document.getElementById("top-img").offsetHeight;	
+		 	document.getElementById("top-img").style.marginTop=(single-imgheight)/2+"px";
+		 }
+		 function test(valuse){
+		 	if(valuse=='ios'){
+		 		document.getElementById("iosButton").style.backgroundColor="#148fae";
+		 		document.getElementById("androidButton").style.backgroundColor="#39b2d1";
+		 		document.getElementById("iosButton").style.color="#9cc6d5";
+		 		document.getElementById("androidButton").style.color="#fff";
+				alert("温馨提示：iOS还在开发中，请尽情期待。");
+		 	}else{
+		 		document.getElementById("androidButton").style.backgroundColor="#148fae";
+		 		document.getElementById("iosButton").style.backgroundColor="#39b2d1";
+		 		document.getElementById("androidButton").style.color="#9cc6d5";
+		 		document.getElementById("iosButton").style.color="#fff";
+				location.href="http://120.24.234.135/ShowFox/appfile/showho.apk"
+				//location.href="http://a.app.qq.com/o/simple.jsp?pkgname=com.xiuhu.showho"
+		 	}
+		 }
+		    
+	</script>
+	
+</html>
+

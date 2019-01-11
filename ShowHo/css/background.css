@@ -1,0 +1,339 @@
+body {margin: 0;	background-color:#eff2f5}
+
+a {text-decoration: none;color: #333;}
+
+/* 居左 */
+.fl{float:left;}
+
+/* 距离左边30px */
+.mgL{margin-left:30px}
+/* 距离顶部40px */
+.mgT40{margin-top:40px}
+/* 距离顶部10px */
+.mgT10{margin-top:10px}
+
+/* 大小 */
+.topK{width:90%;height:140px;margin:auto}
+
+/* 头部大小 */
+.topCss{width:846px;margin:auto;padding-top:20px}
+/* 头部第一行文字样式 */
+.topOneCss{font-size:26px;color:#3e3e3e;line-height:40px;margin-top:10px}
+/* 头部第二行文字样式 */
+.topTwoCss{font-size:16px;color:#3e3e3e}
+
+/* 中间背景大小样式 */	
+.centerCss{width:100%;height:436px;background:url(../img/background/log-content-bg.png)repeat-x bottom #fff;}
+/* 中间内容大小样式 */
+.centerKCss{width:846px;margin:auto}
+/* 中间内容左边样式 */
+.centerOneCss{float:left;margin-left:95px}
+/* 中间内容左边文字样式 */
+.centerOneTextCss{font-size:18px;color:#717171;margin-top:49px;margin-left: 10px;}
+/* 中间内容右边样式 */
+.centerTwoCss{margin-left:540px}
+/* 中间内容右边文字样式 */
+.centerTwoTextCss{padding-top:45px;font-size:18px;color:#717171}
+
+/* 验证码样式 */
+.code{
+	font-family:Arial,宋体;
+	font-style:italic;
+	color:green;
+	border:0;
+	padding:2px 3px;
+	letter-spacing:3px;
+	font-weight:bolder;
+	}
+	
+/* 版权样式 */
+.bqys{font-size:12px;color:#BDC6D7;margin-top:25px;text-align:center}
+
+/* 登录用户小图标样式 */
+.login_user{ 
+	margin-top:40px; 
+	background:url(../img/background/user.png) no-repeat 5px center;
+}
+/* 登录密码小图标样式 */
+.login_password{ 
+	margin-top:20px;
+	background:url(../img/background/password.png) no-repeat 3px center;
+}
+/* 登录验证码小图标样式 */
+.login_code{ 
+	width:250px;
+	margin-top:20px;
+	background:url(../img/background/code.png) no-repeat 5px center;
+}
+/* 登录按钮样式 */
+.bigCSS{border:none;height:45px;background-color:#3499db;border-radius: 5px;width:340px;color:#fff;margin-top:35px;margin-left: 8px;}
+	/* 鼠标放在按钮上的样式 */
+	.bigCSS:hover{background-color:#2686c6;}
+
+/* input全局样式 */
+input{
+	border:none;
+	border-bottom:#ddd 1px solid; 
+	height:40px; 
+	line-height:40px;
+	color:#c0bfbf; 
+	font-size:14px; 
+	padding-left:40px;
+	margin-left:6px;
+	margin-top:30px;
+	box-shadow:none;
+	width:300px;
+}
+
+/* 云朵漂浮样式 */
+.cloud_1{ 
+	background-image:url(../img/background/cloud_1.png); 
+	background-repeat:no-repeat;
+	height:151px; 
+	width:180px; 
+	margin-left:-198px; 
+	position:relative;
+	animation:action1 3s linear 0s infinite alternate;
+	/* Firefox: */
+	-moz-animation:action1 3s linear 0s infinite alternate;
+	/* Safari and Chrome: */
+	-webkit-animation:action1 3s linear 0s infinite alternate;
+	/* Opera: */
+	-o-animation:action1 3s linear 0s infinite alternate;
+	/* ie: */
+	-ms-animation:action1 3s linear 0s infinite alternate;
+}
+@keyframes action1
+{
+	0%{left:10px; top:-10px;}
+	20%{left:20px; top:-20px;}
+	40%{left:30px; top:-30px;}		
+	60%{left:40px; top:-20px;}	
+	80%{left:30px; top:-10px;}
+	100%{left:10px; top:0px;}
+}
+@-moz-keyframes action1 /* Firefox */
+{
+	0%{left:10px; top:-10px;}
+	20%{left:20px; top:-20px;}
+	40%{left:30px; top:-30px;}		
+	60%{left:40px; top:-20px;}	
+	80%{left:30px; top:-10px;}
+	100%{left:10px; top:0px;}
+}
+@-webkit-keyframes action1 /* Safari and Chrome */
+{
+	0%{left:10px; top:-10px;}
+	20%{left:20px; top:-20px;}
+	40%{left:30px; top:-30px;}		
+	60%{left:40px; top:-20px;}	
+	80%{left:30px; top:-10px;}
+	100%{left:10px; top:0px;}
+}
+@-o-keyframes action1 /* Opera */
+{
+	0%{left:10px; top:-10px;}
+	20%{left:20px; top:-20px;}
+	40%{left:30px; top:-30px;}		
+	60%{left:40px; top:-20px;}	
+	80%{left:30px; top:-10px;}
+	100%{left:10px; top:0px;}
+}
+@-ms-keyframes action1 /* ie */
+{
+	0%{left:10px; top:-10px;}
+	20%{left:20px; top:-20px;}
+	40%{left:30px; top:-30px;}		
+	60%{left:40px; top:-20px;}	
+	80%{left:30px; top:-10px;}
+	100%{left:10px; top:0px;}
+}
+.cloud_2{ 
+	background-image:url(../img/background/cloud_2.png); 
+	background-repeat:no-repeat;
+	height:39px; 
+	width:60px;
+	margin-left:390px; 
+	margin-top:-130px; 
+	position:relative;
+	animation:action2 3s linear 0s infinite alternate;
+	/* Firefox: */
+	-moz-animation:action2 3s linear 0s infinite alternate;
+	/* Safari and Chrome: */
+	-webkit-animation:action2 3s linear 0s infinite alternate;
+	/* Opera: */
+	-o-animation:action2 3s linear 0s infinite alternate;
+	/* ie: */
+	-ms-animation:action2 3s linear 0s infinite alternate;
+}
+@keyframes action2
+{
+	0%{left:-10px; top:-10px;}
+	20%{left:-20px; top:-20px;}
+	40%{left:-30px; top:-40px;}		
+	60%{left:-40px; top:-30px;}	
+	80%{left:-30px; top:-20px;}
+	100%{left:-10px; top:-10px;}
+}
+@-moz-keyframes action2 /* Firefox */
+{
+	0%{left:-10px; top:-10px;}
+	20%{left:-20px; top:-20px;}
+	40%{left:-30px; top:-40px;}		
+	60%{left:-40px; top:-30px;}	
+	80%{left:-30px; top:-20px;}
+	100%{left:-10px; top:-10px;}
+}
+@-webkit-keyframes action2 /* Safari and Chrome */
+{
+	0%{left:-10px; top:-10px;}
+	20%{left:-20px; top:-20px;}
+	40%{left:-30px; top:-40px;}		
+	60%{left:-40px; top:-30px;}	
+	80%{left:-30px; top:-20px;}
+	100%{left:-10px; top:-10px;}
+}
+@-o-keyframes action2 /* Opera */
+{
+	0%{left:-10px; top:-10px;}
+	20%{left:-20px; top:-20px;}
+	40%{left:-30px; top:-40px;}		
+	60%{left:-40px; top:-30px;}	
+	80%{left:-30px; top:-20px;}
+	100%{left:-10px; top:-10px;}
+}
+@-ms-keyframes action2 /* ie */
+{
+	0%{left:-10px; top:-10px;}
+	20%{left:-20px; top:-20px;}
+	40%{left:-30px; top:-40px;}		
+	60%{left:-40px; top:-30px;}	
+	80%{left:-30px; top:-20px;}
+	100%{left:-10px; top:-10px;}
+}
+.cloud_3{ 
+	background-image:url(../img/background/cloud_3.png); 
+	background-repeat:no-repeat;
+	height:53px; 
+	width:70px;
+	margin-left:660px; 
+	margin-top:20px; 
+	position:relative;
+	animation:action3 3s linear 0s infinite alternate;
+	/* Firefox: */
+	-moz-animation:action3 3s linear 0s infinite alternate;
+	/* Safari and Chrome: */
+	-webkit-animation:action3 3s linear 0s infinite alternate;
+	/* Opera: */
+	-o-animation:action3 3s linear 0s infinite alternate;
+	/* ie: */
+	-ms-animation:action3 3s linear 0s infinite alternate;
+}
+@keyframes action3
+{
+	0%{left:10px; top:-10px;}
+	20%{left:20px; top:-20px;}
+	40%{left:30px; top:-40px;}		
+	60%{left:40px; top:-30px;}	
+	80%{left:30px; top:-20px;}
+	100%{left:10px; top:-10px;}
+}
+@-moz-keyframes action3 /* Firefox */
+{
+	0%{left:10px; top:-10px;}
+	20%{left:20px; top:-20px;}
+	40%{left:30px; top:-40px;}		
+	60%{left:40px; top:-30px;}	
+	80%{left:30px; top:-20px;}
+	100%{left:10px; top:-10px;}
+}
+@-webkit-keyframes action3 /* Safari and Chrome */
+{
+	0%{left:10px; top:-10px;}
+	20%{left:20px; top:-20px;}
+	40%{left:30px; top:-40px;}		
+	60%{left:40px; top:-30px;}	
+	80%{left:30px; top:-30px;}
+	100%{left:10px; top:-20px;}
+}
+@-o-keyframes action3 /* Opera */
+{
+	0%{left:10px; top:-10px;}
+	20%{left:20px; top:-20px;}
+	40%{left:30px; top:-40px;}		
+	60%{left:40px; top:-30px;}	
+	80%{left:30px; top:-20px;}
+	100%{left:10px; top:-10px;}
+}
+@-ms-keyframes action3 /* ie */
+{
+	0%{left:10px; top:-10px;}
+	20%{left:20px; top:-20px;}
+	40%{left:30px; top:-40px;}		
+	60%{left:40px; top:-30px;}	
+	80%{left:30px; top:-20px;}
+	100%{left:10px; top:-10px;}
+}
+.cloud_4{ 
+	background-image:url(../img/background/cloud_4.png); 
+	background-repeat:no-repeat;
+	height:106px; 
+	width:125px;
+	margin-left:960px; 
+	margin-top:-100px; 
+	position:relative;
+	animation:action4 3s linear 0s infinite alternate;
+	/* Firefox: */
+	-moz-animation:action4 3s linear 0s infinite alternate;
+	/* Safari and Chrome: */
+	-webkit-animation:action4 3s linear 0s infinite alternate;
+	/* Opera: */
+	-o-animation:action4 3s linear 0s infinite alternate;
+	/* ie: */
+	-ms-animation:action4 3s linear 0s infinite alternate;
+}
+@keyframes action4
+{
+	0%{left:-10px; top:-10px;}
+	20%{left:-20px; top:-20px;}
+	40%{left:-30px; top:-40px;}		
+	60%{left:-40px; top:-30px;}	
+	80%{left:-30px; top:-20px;}
+	100%{left:-10px; top:-10px;}
+}
+@-moz-keyframes action4 /* Firefox */
+{
+	0%{left:-10px; top:-10px;}
+	20%{left:-20px; top:-20px;}
+	40%{left:-30px; top:-40px;}		
+	60%{left:-40px; top:-30px;}	
+	80%{left:-30px; top:-20px;}
+	100%{left:-10px; top:-10px;}
+}
+@-webkit-keyframes action4 /* Safari and Chrome */
+{
+	0%{left:-10px; top:-10px;}
+	20%{left:-20px; top:-20px;}
+	40%{left:-30px; top:-40px;}		
+	60%{left:-40px; top:-30px;}	
+	80%{left:-30px; top:-20px;}
+	100%{left:-10px; top:-10px;}
+}
+@-o-keyframes action4 /* Opera */
+{
+	0%{left:-10px; top:-10px;}
+	20%{left:-20px; top:-20px;}
+	40%{left:-30px; top:-40px;}		
+	60%{left:-40px; top:-30px;}	
+	80%{left:-30px; top:-20px;}
+	100%{left:-10px; top:-10px;}
+}
+@-ms-keyframes action4 /* ie */
+{
+	0%{left:-10px; top:-10px;}
+	20%{left:-20px; top:-20px;}
+	40%{left:-30px; top:-40px;}		
+	60%{left:-40px; top:-30px;}	
+	80%{left:-30px; top:-20px;}
+	100%{left:-10px; top:-10px;}
+}

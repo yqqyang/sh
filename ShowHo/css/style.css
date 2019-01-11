@@ -1,0 +1,263 @@
+@charset "utf-8";
+/* 
+date:6:58 2014-9.11
+Copyright H-ui&zcool Inc.
+Created & Modified by guojunhui.
+*/
+/*1 重定义浏览器默认样式
+	Name:			style_reset
+	Level:			Global
+	Explain:		重定义浏览器默认样式
+	Last Modify:	jackying
+*/
+
+/* UL样式 */
+div a{font-size:14px}
+html,body,h1,h2,h3,h4,h5,h6,hr,p,iframe,dl,dt,dd,ul,ol,li,pre,form,button,input,textarea,th,td,fieldset{margin:0;padding:0}
+html,body{*position:static;}
+html{-webkit-text-size-adjust:100%;-ms-text-size-adjust:100%}
+address,caption,cite,code,dfn,em,th,var{font-style:normal;font-weight:normal}
+input,button,textarea,select,optgroup,option{font-family:inherit;font-size:inherit;font-style:inherit;font-weight:inherit}
+input,button{overflow: visible;vertical-align:middle;outline:none;}
+h1,h2,h3,h4,h5,h6{font-size:100%}
+a{cursor: pointer;text-decoration: none;cursor: pointer;color: #1A1A18;}
+a:link{text-decoration:none;} 
+a:visited{text-decoration:none;} 
+a:hover{text-decoration:none;outline:none}
+a.ie6:hover{zoom:1}
+a:focus{outline:none;text-decoration:none;}
+a:hover,a:active{outline:none;text-decoration:none;}:focus{outline:none;text-decoration:none;}
+sub,sup{vertical-align:baseline}
+/*img*/
+.riimg img{border:0;vertical-align:middle;margin-top: -2px;}
+.riimg-1 img{border:0;vertical-align:middle;}
+a img,img{-ms-interpolation-mode:bicubic}
+/*IE下a:hover 背景闪烁*/
+html{overflow:-moz-scrollbars-vertical;zoom:expression(function(ele){ele.style.zoom = "1";document.execCommand("BackgroundImageCache",false,true)}(this))}
+
+/*HTML5 reset*/
+header,footer,section,aside,details,menu,article,section,nav,address,hgroup,figure,figcaption,legend{display:block;margin:0;padding:0}time{display:inline}
+audio,canvas,video{display:inline-block;*display:inline;*zoom:1}
+audio:not([controls]){display:none}
+legend{width:100%;margin-bottom:20px;font-size:21px;line-height:40px;border:0;border-bottom:1px solid #e5e5e5}
+legend small{font-size:15px;color:#999}
+svg:not(:root) {overflow: hidden}
+fieldset {border-width:0;padding: 0.35em 0.625em 0.75em;margin: 0 2px;border: 1px solid #c0c0c0}
+/*
+	Name:			style_clearfix
+	Example:		class="clearfix|cl"
+	Explain:		Clearfix（简写cl）避免因子元素浮动而导致的父元素高度缺失能问题
+*/
+.cl:after,.clearfix:after{content:".";display:block;height:0;clear:both;visibility:hidden}.cl,.clearfix{zoom:1}
+.l{float:left!important;_display:inline}.r{float:right!important;_display:inline}
+.text-l{text-align:left}.text-r{text-align:right}.text-c{text-align:center}
+.va-t{ vertical-align:top!important}.va-m{ vertical-align:middle!important}.va-b{ vertical-align:bottom!important}
+
+/* 文字渐变样式 */
+.colorJ{background: -webkit-gradient(linear,left top,right bottom,from(#ce29a2),to(#3abdd7));-webkit-background-clip: text;-webkit-text-fill-color: transparent;}
+
+	.topnav{ position:fixed;top:50%;right:20px;z-index:999; margin-top:-100px}
+	.topnav li{ height:10px; line-height:0; font-size:0; margin-bottom:28px}
+	.topnav li a{ display:inline-block;text-decoration:none; width:8px; height:8px; background-color:transparent; border:solid 1px #fff; border-radius:100%;}
+	.topnav li a:hover,.topnav li a.current{text-decoration:none; background-color:#fff}
+	.iconpic{display:inline-block; vertical-align:sub;*vertical-align:middle;_vertical-align:middle; width:16px; height:16px; background-image:url(../images/iconpic.png?1);background-position:center; background-repeat:no-repeat;}
+	.iconpic:hover{text-decoration:none}
+
+.wp{ width:1200px; margin:0 auto}
+html,body{width:100%;height:100%}
+.f-18{ font-size:18px}
+.mt-30{ margin-top:30px}
+.hide{display:none}[hidden]{display: none}
+.modal-scrollable{position:fixed;top:0;right:0;bottom:0;left:0;overflow: auto}/*弹出层的最外层，全屏，用户响应点击和滚动*/
+.modal-overflow .modal-scrollable{overflow-y:scroll}/*弹窗超出屏幕高度时，弹出层替代body右侧滚动条，实现弹出层的整体滚动*/
+.modal-backdrop {position:fixed;top:0;right:0;bottom:0;left:0;width:100%;height:100%;z-index:1040;background-color:#000}/*默认遮罩层，全屏黑色*/
+* html .modal-backdrop{position:absolute;left:expression(documentElement.scrollLeft + documentElement.clientWidth - this.offsetWidth);top:expression(documentElement.scrollTop + documentElement.clientHeight - this.offsetHeight)}/*解决IE下 遮罩层兼容性*/
+.modal-backdrop.fade {opacity:0;filter: alpha(opacity=0)}/*遮罩层失去时，透明度为0*/
+.modal-backdrop,.modal-backdrop.fade.in {opacity: 0.7;filter: alpha(opacity=70)}/*遮罩层进入 0.7透明度*/
+.modal {position:absolute;top:50%;left:50%; width:500px;margin-left:-250px;z-index:1050;overflow: visible;background-color: #fff;background-clip: padding-box;
+    box-shadow: 0 3px 7px rgba(0, 0, 0, 0.3);
+    -webkit-background-clip:padding-box;
+    -khtml-background-clip:padding-box;
+    -moz-background-clip:padding-box;
+    -ms-background-clip:padding-box;
+    -o-background-clip:padding-box;
+    background-clip:padding-box;
+    border-radius:6px;
+    border:1px solid rgba(0, 0, 0, 0.3);*border:1px solid #999}/*弹出层，绝对定位，默认【宽度500px，高度自适应，背景白色，6px圆角，带阴影】，自定义宽度可在data-width中设置参数*/
+.fade {opacity: 0;filter: alpha(opacity=0);-webkit-transition: opacity 0.2s linear;-moz-transition: opacity 0.2s linear;-o-transition: opacity 0.2s linear;transition: opacity 0.2s linear}
+.fade.in {opacity: 1;filter: alpha(opacity=100)}
+.modal.fade {top: -100%}/*弹出层进入动画效果*/
+.modal.fade.in{top:50%}/*弹出层进入后居顶距离，配合margin-top负值，实现上下自动居中*/
+.modal.modal-overflow.fade.in{top:0px}/*如果弹出层高度大于窗口，弹出窗口距顶0像素*/
+.loading-spinner {position: absolute;top: 50%;left: 50%;margin: -12px 0 0 -12px}/*Ajax加载数据时loading*/
+  /*弹出层header区*/
+  .modal-header {padding:20px;position:relative}/*弹出层头部*/
+  .modal-header .close{position:absolute; width:37px; height:37px; right:10px; top:10px; background:url(../images/iconpic.png) no-repeat -244px -435px}/*关闭按钮，请调用4.1.1 按钮 .close*/
+  .modal-header .close:hover{ background-position:-295px -435px;}
+  .modal-header h3{margin:0}/*标题*/
+  .modal-body {overflow-y:visible;padding: 15px} /*内容不限高度，内填充15px，不满意可自行修改*/
+  .modal-form {margin-bottom: 0} /*弹出层表单*/
+	
+/*内容区*/
+#container{min-width:74%}
+	.section{background:no-repeat center center fixed;background-size:cover;overflow:hidden; position:relative}
+	.section .wp{ position:relative;height:100%; display:table; z-index:10}
+		#section-1{background-image:url(../img/1/bjOne.jpg)}
+		#section-1 .neirong{ position:absolute; width:100%; height:80%; top:50%; margin-top:-282px; background:url(../img/1/sjOne.png) no-repeat right center;background-size:45%}
+			.down-slogan{height:187px; background:url(../img/1/wz.png) no-repeat 0 0; background-size: 45%; margin-top:10px}
+			.down-slogan-1{width: 48%;left:20px; color:#fff;font-size: 16px;line-height: 1.5;}
+			.down-app{width:50%;height:100%; background:url(../img/1/ewm.png) no-repeat 0 0; padding-left:270px}
+		#section-1 .appdown{display:block; cursor:pointer; height:58px; background:url(../img/1/an.png) no-repeat 0 0;padding-top:20px;margin-top:30px}
+				   
+		#section-3{background-image:url(../img/2/bjTwo.png)}
+		#section-3 .box-1{ position:absolute; width:480px; opacity:0; height:178px; left:20px; top:60%; margin-top:-79px; background:url(../img/2/wz.png) no-repeat center;background-size: 90%;}
+		#section-3 .box-2{ position:absolute; width:480px; opacity:0; height:78px; left:20px; top:65%;color:#fff;font-size: 16px;text-align:center}
+		#section-4{background-image:url(../img/3/tu.jpg)}
+		#section-4 .box-1{ position:absolute; width:480px;opacity:0; height:178px; left:20px; top:60%; margin-top:-79px; background:url(../img/3/wz.png) no-repeat center;background-size: 90%;}
+		#section-4 .box-2{ position:absolute; width:480px;opacity:0; height:78px; left:20px; top:65%;color:#fff;font-size: 16px;text-align:center;line-height: 2;}
+		#section-5{background-image:url(../img/4/tu.jpg)}
+		#section-5 .box-1{ position:absolute; width:480px;opacity:0; height:178px; left:20px; top:60%; margin-top:-79px; background:url(../img/4/wz.png) no-repeat center;background-size: 90%;}
+		#section-5 .box-2{ position:absolute; width:480px;opacity:0; heightheight:78px; left:20px; top:65%;color:#fff;font-size: 16px;text-align:center;line-height: 2;}
+			.iphone6{ position:absolute; display:block;opacity:0; right:10%;bottom:0; width:374px; height:780px; padding-top:100px; }
+			.iphone6 img{ display:block;width:374px; height:780px}
+		#down-share{ height:28px;}
+		#down-share a span{ display:inline-block; width:30px; height:28px; background:url(../images/down-share.png) no-repeat 0 0; cursor:pointer; margin-right:10px}
+		#down-share .jiathis_button_qq span{ background-position:0 0}
+		#down-share .jiathis_button_tsina span{ background-position:-41px 0; width:34px}
+		#down-share .jiathis_button_qzone span{ background-position:-89px 0}
+		#down-share .jiathis_button_tqq span{ background-position:-131px 0}
+		#down-share .jiathis_button_weixin span{ background-position:-168px 0;width:32px}
+		#down-share a:hover span{ opacity:0.8}
+		.footer-link{ margin-top:60px}
+		.footer-copyright{ margin-top:10px}
+		.more-case{ font-size:18px; color:#007aff}
+		.more-case:hover{ color:#007aff; text-decoration:underline}
+		.arrow-bottom{ position:absolute; width:54px; height:27px; background:url(../img/1/left.png) no-repeat 0; left:50%; margin-left:-27px; bottom:30px; z-index:99;animation-name: arrowing;-webkit-animation-name: arrowing;animation-duration: 1.5s;-webkit-animation-duration: 1.5s;animation-iteration-count: infinite;-webkit-animation-iteration-count: infinite;}
+@keyframes arrowing {
+  0% {
+    transform: translateY(-5px);
+    opacity: 0.8;
+  }
+  50% {
+    transform: translateY(10px);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-5px);
+    opacity: 0.8;
+  }
+}
+@-webkit-keyframes arrowing {
+  0% {
+    -webkit-transform: translateY(-5px);
+    opacity: 0.8;
+  }
+  50% {
+    -webkit-transform: translateY(10px);
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: translateY(-5px);
+    opacity: 0.8;
+  }
+}
+
+/* 底部 */
+	/* 底部文字样式 */
+	.bjb div{color:#000;font-size:14px;}
+	/* 上填充 */
+	.pdT{padding-top:125px;}
+	/* 上 */
+	.bk{width:35%;margin:auto;}
+		/* 上图片浮动 */
+		.imgfl{float:left;width:45%}
+		/* 下图片距离 */
+		.imgLT{margin-left:10%;margin-top:30px;background:url(../img/an-2.png) no-repeat 0 0;width:210px;height:55px}
+		.imgLT-1{margin-left:10%;margin-top:30px;background:url(../img/an-1.png) no-repeat 0 0;width:210px;height:55px}
+		.imgLT:hover{background:url(../img/anan-2.png) no-repeat 0 0;display:black}
+		.imgLT-1:hover{background:url(../img/anan-1.png) no-repeat 0 0;}
+		.imgLT img{border:0;vertical-align:middle;}
+		.imgLT-1 img{border:0;vertical-align:middle;}
+	/* 下 */
+		/* 意见反馈 */
+		.yjfk{float:left;padding-top: 80px;}
+		/* 隐私政策 */
+		.yszc{margin-left:10%;padding-top: 80px;width:100px}
+		/* 版权 */
+		.bq{padding-top:90px;text-align: center;}
+		/* 下底部背景 */
+		.bjb{width:100%;background-color:#c3c3c3;margin-top:27%;height:200px;margin-bottom:0px;}
+		/* 下底部宽度 */
+		.bjbX{width:1200px;margin:auto;}
+		.pdT font{color:#000}
+		/* 文字距中 */
+		.tc{text-align:center}
+		/* 上间距13% */
+		.mgT13{margin-top:13%}
+
+/* 头部样式 */
+.dw{height:60px;width:100%;background-color:#000;position: fixed;z-index: 99;}/* 头部定位样式 */
+
+/* 居左、居右 */
+.fl{ float:left;}
+.ri{ float:right;}
+
+/* 每屏的宽度 */
+.pk{width:1200px;margin:auto;}
+
+/* UL样式 */
+div ul{list-style:none;margin-top:17px;}
+div ul li{float:left;margin-right:25px;display:inline;}
+div ul li a{color:#fff;text-decoration: none;}
+div ul li div{text-align:center}
+
+.topTitle{color:#fff;margin-top: 19px;margin-left: 15px;}
+
+/* 默认文字样式 */
+font{color:#fff;font-size: 16px;}
+.pdT font{color:#000}
+
+/* logo大小 */
+.logoIMG{width:35px;}
+
+/* 上间距10% */
+.mgT10{margin-top:15px}
+/* 上间距80px */
+.mgT80{margin-top:60px}
+/* 上间距13% */
+.mgT13{margin-top:13%}
+/* 上间距15% */
+.mgT15{margin-top:15%}
+/* 上间距20% */
+.mgT20{margin-top:20%}
+/* 上间距40% */
+.mgT40{margin-top:40%}
+/* 上间距46px */
+.mgT46{margin-top:46px;line-height: 24px;}
+
+/* 三角形底部样式 */
+.sj{margin-left:50%;height:90px}
+
+/* 图宽 */
+.tk{width:100%}
+.riimg:hover{background:url(../img/1/anan-2.png) no-repeat 0 0;}
+.riimg-1:hover{background:url(../img/1/anan-1.png) no-repeat 0 0;}
+
+/* 第一屏到第四屏左边的宽度 */
+.flk{float:left;width:49%}
+
+/* 第二屏到第四屏右边的宽度 */
+.rikd{float:left;margin-left:8%;margin-top:13%;width:30%;margin-bottom:-249px;}
+
+/* 第二屏到第四屏左边文字样式 */
+.flwz{margin-top:8%;text-align:center}
+
+/* 第一屏 */
+.bj1{background:url(../img/1/bjOne.jpg) no-repeat center;size:100%;}
+.pdT9{padding-top:9%;padding-bottom:6.6%}
+	/* 右边 */
+	.rik{float:left;margin-left:100px;width:42%}
+	.riimg{float:left;margin-left:80px;margin-top:30px}
+	.riimg-1{float:left;margin-left:80px;margin-top:30px}
+	
+	.fss{font-size:34px}

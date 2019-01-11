@@ -1,0 +1,16 @@
+﻿<script type="text/javascript">
+window.onload=function browserRedirect() {
+    var sUserAgent = navigator.userAgent.toLowerCase();
+    var bIsIpad = sUserAgent.match(/ipad/i) == "ipad";
+    var bIsIphoneOs = sUserAgent.match(/iphone os/i) == "iphone os";
+    var bIsAndroid = sUserAgent.match(/android/i) == "android";
+ 
+    if (bIsIpad || bIsIphoneOs) {//IOS打开链接
+        //window.location.href = '2.html';
+		alert("温馨提示：iOS还在开发中，请尽情期待。");
+    }else{//安卓打开链接
+        window.location.href ='http://120.24.234.135/ShowFox/appfile/showho.apk';
+        //window.location.href ='http://a.app.qq.com/o/simple.jsp?pkgname=com.xiuhu.showho';
+    }
+}
+</script>

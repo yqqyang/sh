@@ -1,0 +1,118 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8">
+<title>ShowHo</title>
+<link rel="shortcut icon" href="img/logo.ico">
+<meta name="keywords" content="" />
+<meta name="description" content="" />
+<meta name="renderer" content="webkit">
+<meta id="viewport" name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+<meta name="format-detection" content="telephone=no">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<link rel="stylesheet" href="css/opinion.css">
+<!-- 文本编辑器样式 -->
+<link rel="stylesheet" type="text/css" href="css/wangEditor-1.3.5.css">
+</head>
+<body style="margin:0px;background-color:#f8f8f8;">
+
+<!--#include file="head.html"-->
+<!-- 头部 -->
+<div class="dw">
+	<div class="pk">
+		<div class="fl"> <img src="img/1/logo.png" class="mgT10"> </div>
+		<div class="ri">
+			<ul>
+        		<li><a href="index.html">首页</a></li>
+            	<!--<li><a href="partner.html">合作伙伴</a></li>
+            	<li><a href="about.html">关于我们</a></li>-->
+				<li><a href="link.html">联系我们</a></li>
+        	</ul>
+		</div>
+	</div>
+</div>
+<div class="clear"></div>
+
+<div class="pkNone" id="pkNone">
+<form>
+	<div class="pk">
+		<div class="mgT5 pkU fs24"><strong>欢迎反馈问题，您的意见与建议就是我们的动力！</strong></div>
+		<div class="mgT12 pkU fs12">我们会认真查阅您反馈的每一个问题，并尽快给您答复，在这里您可以提出遇到的问题，也可以发表自己的建议和想法。</div>
+		<div class="mgT2 pkU fs12">问题与建议描述：</div>
+
+		<!-- 文本编辑器 -->
+		<div class="pkU mgT12">
+			<textarea id='textarea1' style='height:300px; width:40%;'></textarea>
+		</div>
+		 <div class="clear"></div>
+		 
+		 <div class="mgT2 pkU fs12">如果您希望得到反馈，请留下您的联系方式：</div>
+		 <div class="pkU mgT12">
+			<input type="text" placeholder="昵称" />
+			<input type="text" placeholder="QQ" class="mgL25"/>
+			<input type="text" placeholder="E-mail" class="Inputk mgL25"/>
+			 <!--
+			 <input type="text" value="昵称" onfocus="this.value=''" onblur="if(this.value==''){this.value='昵称'}" />
+			 <input type="text" value="QQ" onfocus="this.value=''" onblur="if(this.value==''){this.value='QQ'}" class="mgL25"/>
+			 <input type="text" value="E-mail" onfocus="this.value=''" onblur="if(this.value==''){this.value='E-mail'}" class="Inputk mgL25"/>-->
+		 </div>
+
+		 <div class="clear"></div>
+		 
+		 <!-- 按钮部分 -->
+		 <div class="pkU mgT2">
+			<div class="fl aKB">
+				<input type="button" value="提交反馈" class="bigCSS" onclick="change()"/>
+			</div>
+			<div class="ri aKL">
+				<input type="reset" value="取消" class="littleCSS"/>
+			</div>
+		 </div>
+	</div>
+<form>
+</div>
+
+<div class="pkShow" id="pkShow">
+	 <div class="pk">
+		 <div class="mgT8 pkU fs24"><strong>提交成功！</strong></div>
+		<div class="mgT12 pkU fs12">感谢您对我们工作的大力支持，提交宝贵的意见，我们会尽快给您答复，请耐心等待。</div>
+		<input type="button" value="关闭页面" class="bCSS" onclick="shou()"/>
+	</div>
+</div>
+ 
+ <div class="clear"></div>
+<!-- 底部 -->
+<div class="pdT">
+	<div class="bjb">
+		<div class="bjbX">
+			<div class="yjfk"><a href="opinion.html">意见反馈</a></div><div class="yszc"><a href="privacy.html">隐私政策</a></div>
+			<div class="bq">Copyright © 2006-2015 ShowHo</div>
+		</div>
+	</div>
+</div>
+
+<!-- 文本编辑器 -->
+	<script src="js/jquery-1.10.2.min.js"></script>
+	<script src="js/wangEditor-1.3.5.js"></script>
+	<script type="text/javascript">
+		$(function() {
+			var editor = $('#textarea1').wangEditor();
+			$(".littleCSS").click(function(){
+				editor.html("");
+			});
+		});
+		function change(){
+		 var winH=window.innerHeight || document.documentElement.clientHeight;
+			$('.pkShow, pk').css('height',winH/1.8);
+		  document.getElementById("pkShow").style.display="block";
+		  document.getElementById("pkNone").style.display="none";
+		}
+		
+		function shou(){
+			location.href = 'index.html';
+			return false;
+		}
+    </script>	
+</body>
+</html>

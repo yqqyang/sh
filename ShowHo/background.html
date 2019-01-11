@@ -1,0 +1,88 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>ShowHo</title>
+  <link rel="shortcut icon" href="img/logo.ico">
+  <link rel="stylesheet" href="css/background.css">
+
+  <!-- 验证码javascript -->
+	<script language="javascript" type="text/javascript">
+	var code ; //在全局 定义验证码
+	function createCode(){ 
+	code = new Array();
+	var codeLength = 4;//验证码的长度
+	var checkCode = document.getElementById("checkCode");
+	checkCode.value = "";
+
+	var selectChar = new Array(0,1,2,3,4,5,6,7,8,9);
+
+	for(var i=0;i<codeLength;i++) {
+	   var charIndex = Math.floor(Math.random()*32);
+	   code +=selectChar[charIndex];
+	}
+	if(code.length != codeLength){
+	   createCode();
+	}
+	checkCode.value = code;
+	}
+
+	function validate () {
+	var inputCode = document.getElementById("input1").value.toUpperCase();
+
+	if(inputCode.length <=0) {
+	   alert("请输入验证码！");
+	   return false;
+	}
+	else if(inputCode != code ){
+	   alert("验证码输入错误！");
+	   createCode();
+	   return false;
+	}
+	}
+	</script>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312"></head>
+
+</head>
+<body onLoad="createCode();">
+
+	<!-- 头部 -->
+	<div class="topK">
+		<div class="topCss">
+			<div class="fl"><img src="img/background/logo.png"></div>
+			<div class="fl mgL">
+				<div class="topOneCss">欢迎来到秀狐</div>
+				<div class="topTwoCss">秀狐！秀出自己</div>
+			</div>
+			<div class="cloud_1"></div>
+			<div class="cloud_2"></div>
+			<div class="cloud_3"></div>
+			<div class="cloud_4"></div>
+			
+		</div>
+	</div>
+	
+	<!-- 中间内容 -->
+	<div class="centerCss">
+		<div class="centerKCss">
+			<!-- 左边内容 -->
+			<div class="centerOneCss">
+				<div class="centerOneTextCss">Welcome,Please login.欢迎您，请登录</div>
+				<input class="login_user" placeholder="请输入用户名"></br>
+				<input class="login_password" placeholder="请输入密码" type="password"></br>
+				<input class="login_code" placeholder="请输入验证码" id="input1"><input id="checkCode" class="code" style="width:60px" onClick="createCode()" readOnly="true"></br>
+				<button value="登录" class="bigCSS" onClick="validate();">登录</button>
+			</div>
+			<!-- 右边内容 -->
+			<div class="centerTwoCss">
+				<div class="centerTwoTextCss">秀狐宣言：轻松带您玩赚演唱会</div>
+				<img src="img/background/one.png" class="mgT40">
+				<img src="img/background/two.png" class="mgT10">
+			</div>
+		</div>
+	</div>
+	
+	<!-- 底部版权 -->
+	<div class="bqys">深圳市秀狐网络传媒有限公司 版权所有者©2015  www.showho.cc</div>
+</body>
+</html>
